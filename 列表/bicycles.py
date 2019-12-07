@@ -1,3 +1,4 @@
+# 列表索引和基础操作
 # 列表是由一系列按特定顺序排列的元素组成
 bicycles = ['trek', 'cannondale', 'redline', 'specialized']
 print(bicycles)
