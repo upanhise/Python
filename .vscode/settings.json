@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "H://soft//python_1//python.exe"
+    "python.pythonPath": "H://soft//python_1//python.exe",
+    "sync.autoDownload": true,
+    "sync.autoUpload": true,
+    "sync.gist": "a6e2d1850050af8b7d95a67b0362d3b3",
+    "sync.quietSync": true
 }
