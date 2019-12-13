@@ -184,7 +184,7 @@ making_pizza('mushrooms', 'green peppers', 'extra cheese')
 
 
 def make_pizza(size, color, *toppings):
-    print("Making a " + str(size) + "   " +
+    print("Making a " + str(size) + "-size   " +
           color + " pizza with following toppings ")
     for topping in toppings:
         print("- " + topping)
@@ -192,6 +192,8 @@ def make_pizza(size, color, *toppings):
 
 make_pizza(18, 'red', 'pepperoni')
 make_pizza(28, 'green', 'mushrooms', 'green eppers', 'extra cheese')
+
+# 使用任意数量的关键字实参
 
 
 def make_pizza_2(size, color, **toppings):
