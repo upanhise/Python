@@ -107,7 +107,68 @@ class ElectricCar(Car):
         super().__init__(make, model, year)
         """super()函数把子类和父类关联起来"""
         print("This is a electriccar !")
+        self.battery_size = 70
+
+    def describe_battery(self):
+        """打印一条描述电瓶容量的消息"""
+        print("This car has a " + str(self.battery_size) + "-Kwh battery")
 
 
 my_tesla = ElectricCar('tesla', 'model_s', 2019)
 my_tesla.get_descriptive_name()
+
+# 给子类定义属性和方法
+# 让子类继承父类后，可以添加区分子类和父类的新属性和方法
+# 添加电动汽车特有属性电瓶 self.battery_size = 70
+# 添加电动汽车电瓶的描述方法 describe_battery
+
+my_tesla.describe_battery()
+
+# 重写父类的方法
+# 可以通过在子类定义一个父类同名的方法对父类方法进行更新
+# def fill_gas_tank(self):
+#  """电瓶汽车没有油箱"""
+#     print("This car doesn't need a gas tank !")
+
+# 将实例用作属性
+
+
+class Battery():
+    """一次模拟电动汽车电瓶的简单尝试"""
+
+    def __init__(self, battery_size=180,):
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """打印一条描述电瓶的消息"""
+        print("This has a " + str(self.battery_size) + "-Kwh battary")
+
+    def get_range(self):
+        """打印一条消息，指出电瓶的续航里程"""
+        if self.battery_size == 60:
+            range = 240
+            """局部变量range"""
+        if self.battery_size == 180:
+            range = 600
+        print("This car can go approximately " +
+              str(range) + " miles on a full charge")
+
+
+class ElectricCar(Car):
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+        """创建一个self.battery_size属性,每次运行都将要创建一个对应的battery()实例"""
+        self.battery = Battery()
+
+
+my_tesla = ElectricCar('tesla', 'model_s', 2019)
+my_tesla.get_descriptive_name()
+my_tesla.battery.describe_battery()
+my_tesla.battery.get_range()
+
+# 导入类
+# Python 标准库
+# 类编码风格
+# 1.类命名用驼峰命名法，类名中每个单词首字母大写，不使用下划线，实例名和模块名采用小写格式，并在单词间加上下划线
+# 2.在类中，可使用一个空行分隔方法，在模块中，可使用两个空行来分隔类
+# 3.先编写导入标准库模块的import语句，再添加一个空行，然后再编写导入自己编写模块的import语句
